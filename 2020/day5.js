@@ -36,24 +36,17 @@ fs.readFile('./input.day5.txt', 'utf8', (err, data) => {
           break;
       }
     }
-    ranges.push({ x: rangex[0], y: rangey[0]});
+    // ranges.push({ x: rangex[0], y: rangey[0] });
     IDs.push(rangex[0] * 8 + rangey[0]);
     if (rangex[0] * 8 + rangey[0] > highest) {
       highest = rangex[0] * 8 + rangey[0]
     }
   }
-  let myseat = 0;
-  for (const i in IDs) {
-    for (const j in IDs) {
-      if (Math.abs(IDs[i] - IDs[j]) == 2
-      ) {
-        let ID = (IDs[i] + IDs[j]) / 2;
-        rx = Math.floor(ID / 8);
-        ry = Math.floor(ID / rx - 8) % 8;
-        console.log(rx, ry, ID);
-      }
+  IDs.sort(function (a, b) { return a - b });
+  for (let i in IDs) {
+    if (IDs[i - 1] && IDs[i] - IDs[i - 1] != 1) {
+      console.log("your seat is", IDs[i] - 1);
     }
   }
-
-  console.log(highest);
+  console.log(highest, "is the greatest ID.");
 });
