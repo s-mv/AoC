@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n');
     let highest = 0;
     let IDs = [];
@@ -35,5 +34,4 @@ module.exports = {
       (IDs[i - 1] && IDs[i] - IDs[i - 1] != 1) && (console.log("your seat is", IDs[i] - 1));
     }
     console.log(highest, "is the greatest ID.");
-  }
-};
+}

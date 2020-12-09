@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n');
     let count = 0;
     let bagInfo = [];
@@ -13,5 +12,4 @@ module.exports = {
       // console.log(arr[i].split(/contain/gi)[1].match(/shiny gold/));
     }
     console.log(count)
-  }
-};
+}

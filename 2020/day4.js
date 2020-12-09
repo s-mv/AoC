@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n\n');
     console.log(arr);
     let count = 0;
@@ -19,5 +18,4 @@ module.exports = {
     }
     console.log(count, 'valid passports without checking initials');
     console.log(count2, 'valid passports checking initials');
-  }
-};
+}

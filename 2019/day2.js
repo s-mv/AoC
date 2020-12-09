@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split(',');
     let final = 19690720;
     function getNum(arr) {
@@ -39,5 +38,4 @@ module.exports = {
     }
     arr[1] = 12, arr[2] = 2;
     console.log(getNum(arr), 'is the first number.');
-  }
-};
+}

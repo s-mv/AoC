@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n\n');
     let count = 0;
     let count2 = 0;
@@ -24,5 +23,4 @@ module.exports = {
     }
     console.log(count, 'total votes if anyone answers...');
     console.log(count2, 'total votes if everyone answers...');
-  }
-};
+}

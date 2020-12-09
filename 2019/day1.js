@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n');
     // let arr = [14, 1969, 100756];
     let total = 0;
@@ -20,5 +19,4 @@ module.exports = {
     }
     console.log('total fuel needed:', total);
     console.log('total fuel needed for fuel:', total2);
-  }
-};
+}

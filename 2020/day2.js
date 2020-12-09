@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split(/[-\n: ]/gi);
     // most ineffecient code lol
     let count = 0;
@@ -17,4 +16,3 @@ module.exports = {
     console.log(count, 'valid passwords out of', Math.floor(arr.length / 5), 'total according to old policy.');
     console.log(count2, 'valid passwords out of', Math.floor(arr.length / 5), 'total according to new policy.');
   }
-};

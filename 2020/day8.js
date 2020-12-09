@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n');
     let acc = 0;
     let acc2 = 0;
@@ -50,5 +49,4 @@ module.exports = {
       }
     }
     console.log(acc2, 'after fixing infinite loop')
-  }
-};
+}

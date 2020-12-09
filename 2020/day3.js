@@ -1,5 +1,4 @@
-module.exports = {
-  run: function (data) {
+module.exports = (data) => {
     let arr = data.split('\n');
     arr.splice(arr.length - 1);
     let w = arr[0].length;
@@ -16,5 +15,4 @@ module.exports = {
     }
     let res = getTrees(1, 1) * getTrees(3, 1) * getTrees(5, 1) * getTrees(7, 1) * getTrees(1, 2);
     console.log(res, 'is the product of trees encountered.')
-  }
-};
+}
