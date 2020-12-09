@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-console.log("Day 1");
+console.log("Day 5");
 
 fs.readFile('./input.day5.txt', 'utf8', (err, data) => {
   if (err) {
